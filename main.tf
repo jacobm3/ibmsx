@@ -5,3 +5,9 @@ provider "ibm" {
   softlayer_username = "asdf"
   softlayer_api_key  = "asdf"
 }
+
+resource "null_resource" "null" {
+  triggers = {
+    value = "${timestamp()}"
+  }
+}
